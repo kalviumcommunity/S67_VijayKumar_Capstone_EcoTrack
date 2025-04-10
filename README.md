@@ -103,14 +103,25 @@ Achievements, streaks, and leaderboards to build healthy green habits.
 - Mobile app integration
 
 ---
+Day	Task
+Day 1	📝 Create GitHub repository and add a detailed README.md file with project goals and setup instructions.
 
-## 🤝 Contributing to EcoTrack
+Day 2	⚙️ Set up the backend with Express. Create a basic GET / API route and test it using Postman or Thunder Client.
 
-We welcome contributions from developers, designers, and environmental enthusiasts!
+Day 3	📤 Implement POST /data API route to receive and handle JSON data using Express middleware.
 
-### 🔧 Setup Instructions
+Day 4	🔁 Implement PUT /data/:id and DELETE /data/:id routes to update and delete data entries (using mock IDs initially).
 
-1. **Fork the repo**  
-2. Clone your forked version:
-   ```bash
-   git clone <your-fork-url>
+Day 5	🚀 Deploy the backend to Render or Railway. Ensure all API routes are live and publicly accessible.
+
+
+Day 6	🧬 Create MongoDB schema using Mongoose and connect the backend to MongoDB Atlas. Define basic models like User or Task.
+
+Day 7	🗃️ Add database operations: Create (.save()), Read (.find()), Update, and Delete. Link these to respective API routes.
+
+Day 8	🌐 Initialize the frontend using Vite or Create React App. Set up folder structure and install Tailwind CSS.
+
+Day 9	🚢 Deploy the frontend to Vercel or Netlify. Make sure it connects to the backend APIs correctly.
+
+Day 10	🧱 Build frontend components: Login form, Dashboard, and Data List. Integrate with backend using Axios or Fetch API.
+

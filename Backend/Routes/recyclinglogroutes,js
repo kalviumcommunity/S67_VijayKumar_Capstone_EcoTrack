@@ -1,0 +1,12 @@
+import { getalllogs, getlogsbyuser } from '../Controllers/recyclingControll';
+
+const express = require('express');
+
+const recyclinglogsrouter = express.Router();
+
+recyclinglogsrouter.get('/logs', getalllogs);
+recyclinglogsrouter.get('/logs/:userId', getlogsbyuser);
+
+module.exports = recyclinglogsrouter;
+
+
