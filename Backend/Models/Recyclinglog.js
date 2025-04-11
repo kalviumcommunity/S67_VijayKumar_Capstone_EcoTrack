@@ -11,7 +11,7 @@ const recyclinglogschema = new mongoose.Schema({
     enum : ['plastic', 'paper', 'metal', 'glass', 'electronics','organic', 'other'],
     required: true
    }, 
-   quantitykg:{
+   quantity:{
     type:Number,
     required:true,
    }, 
@@ -26,6 +26,7 @@ const recyclinglogschema = new mongoose.Schema({
     },
     coordinates:{
         type:[Number],
+        required: true
         // index:'2dsphere',
     },
    },
