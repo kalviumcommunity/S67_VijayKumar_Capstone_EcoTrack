@@ -18,7 +18,6 @@ exports.getlogsbyuser = async(req, res)=>{
     }
 };
 
-
 exports.addrecyclinglogs = async(req, res)=>{
     try{
         const {user, materialtype,quantity, centerId } = req.body;
@@ -29,5 +28,20 @@ exports.addrecyclinglogs = async(req, res)=>{
     catch(err){
         console.error(err);
         res.status(500).json({message:'failed to add recycling log', error: err.message});
+    }
+}
+
+exports. updaterecyclinglog = async(req, res)=>{
+    try{
+        const {id} = req.params;
+        const updatelog = await Recyclinglog.findByIdAndUpdate(id, req.body, {new: true});
+        if(!updatelog){
+            return res.status(404).json({message:'Recycling log not found'});
+        }
+        res.status(200).json({message:'Recycling log updated successfully', updatelog});
+
+    }catch(err){
+        console.error(err);
+        return res.status(500).json({message:'Failed to update recycling log', error: err.message});
     }
 }
