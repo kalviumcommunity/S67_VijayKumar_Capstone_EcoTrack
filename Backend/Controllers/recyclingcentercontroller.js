@@ -21,3 +21,18 @@ exports.addcenter = async (req, res) => {
         res.status(500).json({message: 'failed to add recycling center', error: err.message});
     }
 }
+
+
+exports. updateRecyclingCenter = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const updatedCenter = await RecyclingCenter.findByIdAndUpdate(id, req.body, { new: true });
+    if (!updatedCenter) {
+      return res.status(404).json({ message: 'Recycling Center not found' });
+    }
+    res.json(updatedCenter);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
