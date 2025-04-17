@@ -3,9 +3,9 @@ const { getAllRecyclingCenters, addcenter, updateRecyclingCenter } = require('..
 
 const recyclingcentersrouter = express.Router();
 
-recyclingcentersrouter.get('/centers', getAllRecyclingCenters);
+recyclingcentersrouter.get('/', getAllRecyclingCenters);
 
-recyclingcentersrouter.post('/centers', addcenter)
+recyclingcentersrouter.post('/', addcenter)
 
-recyclingcentersrouter.put('/centers/:id', updateRecyclingCenter)
+recyclingcentersrouter.put('/:id', updateRecyclingCenter)
 module.exports = recyclingcentersrouter;
