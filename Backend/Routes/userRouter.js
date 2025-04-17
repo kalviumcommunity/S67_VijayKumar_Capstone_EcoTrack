@@ -3,14 +3,14 @@ const { getAllusers, getUserById, registersUser, loginUsers, updateUser } = requ
 
 const userrouter = express.Router();
 
-userrouter.get('/users', getAllusers);
-userrouter.get('/users/:id', getUserById);
+userrouter.get('/', getAllusers);
+userrouter.get('/:id', getUserById);
 
 
 userrouter.post('/register', registersUser);
 userrouter.post('/login', loginUsers);
 
-userrouter.put('/users/:id', updateUser)
+userrouter.put('/:id', updateUser)
 
 
 module.exports = userrouter;

@@ -1,23 +1,26 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 
 const recyclingcentersrouter = require('./Routes/recyclingcenter')
 const userrouter = require('./Routes/userRouter')
 const recyclinglogsrouter = require('./Routes/recyclinglogroutes')
 
+app.use(cors())
+
 app.use(express.json());
-require('dotenv').config();;
-const connectDb = require('../Backend/Database/db');
+require('dotenv').config();
+const connectDb = require('./Database/db');
 const url = process.env.db_uri;
 
-app.use('/api/centers',  recyclingcentersrouter);
-app.use('/api/users', userrouter);
-app.use('/api/logs', recyclinglogsrouter);
+app.use('/centers',  recyclingcentersrouter);
+app.use('/users', userrouter);
+app.use('/logs', recyclinglogsrouter);
 
 
-app.use('/api/centers',recyclingcentersrouter );
-app.use('/api/users', userrouter);
-app.use('/api/logs', recyclinglogsrouter);
+// app.get('/', (req, res) => {
+//   res.send('Server is running fine');
+// });
 
 
 const port = 3000;
