@@ -18,9 +18,9 @@ app.use('/users', userrouter);
 app.use('/logs', recyclinglogsrouter);
 
 
-// app.get('/', (req, res) => {
-//   res.send('Server is running fine');
-// });
+app.get('/', (req, res) => {
+  res.send('Server is running fine');
+});
 
 
 const port = 3000;
