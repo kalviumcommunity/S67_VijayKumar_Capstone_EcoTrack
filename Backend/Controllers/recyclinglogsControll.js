@@ -4,6 +4,7 @@ exports.getalllogs = async (req, res) => {
   try {
     const logs = await Recyclinglog.find({});
     res.json(logs);
+
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: 'Error fetching logs' });
@@ -14,6 +15,7 @@ exports.getlogsbyuser = async (req, res) => {
   try {
     const logs = await Recyclinglog.find({ user: req.params.userId });
     res.json(logs);
+
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: 'Error fetching logs' });
@@ -37,6 +39,7 @@ exports.addrecyclinglogs = async (req, res) => {
     });
 
     await newlog.save();
+
     res.status(201).json({ message: "Recycling log added successfully", newlog });
   } catch (err) {
     console.error(err);
@@ -52,6 +55,7 @@ exports.updaterecyclinglog = async (req, res) => {
       return res.status(404).json({ message: 'Recycling log not found' });
     }
     res.status(200).json({ message: 'Recycling log updated successfully', updatelog });
+    
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: 'Failed to update recycling log', error: err.message });

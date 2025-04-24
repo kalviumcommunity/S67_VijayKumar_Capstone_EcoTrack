@@ -10,7 +10,7 @@ userrouter.get('/:id', getUserById);
 userrouter.post('/register', registersUser);
 userrouter.post('/login', loginUsers);
 
-userrouter.put('/:id', updateUser)
+userrouter.put('/:id', updateUser);
 
 
 module.exports = userrouter;

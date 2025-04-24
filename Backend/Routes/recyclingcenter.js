@@ -5,7 +5,7 @@ const recyclingcentersrouter = express.Router();
 
 recyclingcentersrouter.get('/', getAllRecyclingCenters);
 
-recyclingcentersrouter.post('/', addcenter)
+recyclingcentersrouter.post('/', addcenter);
 
-recyclingcentersrouter.put('/:id', updateRecyclingCenter)
+recyclingcentersrouter.put('/:id', updateRecyclingCenter);
 module.exports = recyclingcentersrouter;

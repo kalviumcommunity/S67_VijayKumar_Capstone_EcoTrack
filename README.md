@@ -130,5 +130,5 @@ Day 10	🧱 Build frontend components: Login form, Dashboard, and Data List. Int
 
 ** Deployment links
 
-[Backendend] (https://s67-vijaykumar-capstone-ecotrack-14.onrender.com)
+[Backendend](https://s67-vijaykumar-capstone-ecotrack-14.onrender.com)
 

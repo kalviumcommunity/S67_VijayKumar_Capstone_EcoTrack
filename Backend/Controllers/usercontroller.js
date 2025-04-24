@@ -6,6 +6,7 @@ exports.getAllusers = async (req, res) => {
   try {
     const users = await User.find();
     res.status(200).json(users);
+
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -18,6 +19,7 @@ exports.getUserById = async (req, res) => {
       return res.status(404).json({ message: 'Unable to find the user' });
     }
     res.json(user);
+
   } catch (err) {
     res.status(500).json({ message: 'Failed to fetch the user' });
   }
@@ -42,6 +44,7 @@ exports.registersUser = async (req, res) => {
     });
 
     await newUser.save();
+
     res.status(201).json({ message: 'User registered successfully', user: newUser });
   } catch (err) {
     res.status(500).json({ message: 'Failed to register user', error: err.message });
@@ -64,6 +67,7 @@ exports.loginUsers = async (req, res) => {
 
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRETKEY, { expiresIn: '1h' });
     res.status(200).json({ message: 'Login successful', token });
+
   } catch (err) {
     res.status(400).json({ message: 'Login failed', error: err.message });
   }
@@ -79,6 +83,7 @@ exports.updateUser = async (req, res) => {
     }
 
     res.status(200).json({ message: 'User updated successfully', user: updateUser });
+    
   } catch (err) {
     res.status(500).json({ message: 'Failed to update user', error: err.message });
   }
