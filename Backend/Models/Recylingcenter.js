@@ -22,7 +22,7 @@ const centerSchema = new mongoose.Schema({
   },
   acceptedMaterials: [String],
   contact: {
-    phone: String,
+    phone: Number,
     email: String
   }
   

@@ -125,3 +125,10 @@ Day 9	🚢 Deploy the frontend to Vercel or Netlify. Make sure it connects to th
 
 Day 10	🧱 Build frontend components: Login form, Dashboard, and Data List. Integrate with backend using Axios or Fetch API.
 
+
+** Project Status and Setup
+
+** Deployment links
+
+[Backendend] (https://s67-vijaykumar-capstone-ecotrack-14.onrender.com)
+
