@@ -5,7 +5,7 @@ const recyclinglogsrouter = express.Router();
 
 
 recyclinglogsrouter.get('/', getalllogs);
-recyclinglogsrouter.get('/:userId', getlogsbyuser);
+recyclinglogsrouter.get('/:userId', getlogsbyuser)
 recyclinglogsrouter.post('/', addrecyclinglogs);
 recyclinglogsrouter.put('/:id', updaterecyclinglog);
 
